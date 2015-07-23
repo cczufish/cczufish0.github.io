@@ -1,0 +1,30 @@
+<HTML>
+	<HEAD>
+		<TITLE>基本数据类型转换</TITLE>
+		<SCRIPT Language="JavaScript">
+
+            var num1 = "100";
+            var num2 = "200";
+            document.write("num1='100' num2='200'");
+            var result = Number(num1)+Number(num2);
+            document.write("<br>数值的运算结果为：",result);
+            var st = String(num1);
+            result = st+200;
+            document.write("<br>字符串与数字的运算结果为：",result);
+            var bo = Boolean(num1);
+            result = bo+num2;
+            document.write("<br>字符串与布尔值的运算结果为：",result);
+            result = bo + 200;
+            document.write("<br>数值与布尔值的运算结果为：",result);
+            
+
+		    document.write("null的数据类型为"+typeof(null),"<br>");
+		    document.write("undefined的数据类型为"+typeof(undefined),"<br>");
+		    document.writeln("null==undefined?",null==undefined,"<br>");
+		    document.writeln("null==undefined?",null===undefined,"br");
+		</SCRIPT>
+	</HEAD>
+	<BODY>
+	</BODY>
+</HTML>
+
