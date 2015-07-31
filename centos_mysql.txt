@@ -1,0 +1,33 @@
+MySQL-devel-5.5.45-1.linux2.6.x86_64.rpm
+MySQL-client-5.5.45-1.linux2.6.x86_64.rpm
+MySQL-server-5.5.45-1.linux2.6.x86_64.rpm
+
+http://cdn.mysql.com/Downloads/MySQL-5.5/MySQL-server-5.5.45-1.linux2.6.x86_64.rpm
+
+http://cdn.mysql.com/Downloads/MySQL-5.5/MySQL-client-5.5.45-1.linux2.6.x86_64.rpm
+
+http://cdn.mysql.com/Downloads/MySQL-5.5/MySQL-devel-5.5.45-1.linux2.6.x86_64.rpm
+
+rpm -ivh MySQL-client-5.5.45-1.linux2.6.x86_64.rpm MySQL-server-5.5.45-1.linux2.6.x86_64.rpm MySQL-devel-5.5.45-1.linux2.6.x86_64.rpm
+
+which mysql
+
+mysql --version
+
+https://ask.fedoraproject.org/en/question/43459/how-to-start-mysql-mysql-isnt-starting/
+yum install mariadb mariadb-server
+systemctl start mariadb.service
+systemctl enable mariadb.service
+/usr/bin/mysql_secure_installation
+
+mysql -u root -p
+show databases;
+create database mytest;
+use mytest;
+create table students(
+    -> id int unsigned not null auto_increment primary key,
+    -> name char(8) not null,
+    -> sex char(4) not null);
+show tables;
+insert into students values(1,"ysh","femeal");
+
