@@ -31,3 +31,5 @@ create table students(
 show tables;
 insert into students values(1,"ysh","femeal");
 
+mysql怎么查看端口号
+show variables ；
