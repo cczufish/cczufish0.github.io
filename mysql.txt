@@ -362,3 +362,12 @@ MySQL的默认编码是Latin1，不支持中文，那么如何修改MySQL的默�
 2、在MySQL的安装目录下找到my.ini，如果没有就把my-medium.ini复制为一个my.ini即可 
 3、打开my.ini以后，在[client]和[mysqld]下面均加上default-character-set=utf8，保存并关闭 
 4、启动MySQL服务
+
+centos彻底删除mysql  
+
+yum remove mysql mysql-server mysql-libs compat-mysql51
+rm -rf /var/lib/mysql
+rm /etc/my.cnf
+查看是否还有mysql软件：
+rpm -qa|grep mysql
+有的话继续删除

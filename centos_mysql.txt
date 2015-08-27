@@ -8,6 +8,8 @@ http://cdn.mysql.com/Downloads/MySQL-5.5/MySQL-client-5.5.45-1.linux2.6.x86_64.r
 
 http://cdn.mysql.com/Downloads/MySQL-5.5/MySQL-devel-5.5.45-1.linux2.6.x86_64.rpm
 
+/usr/local/mysql    安装文件
+
 rpm -ivh MySQL-client-5.5.45-1.linux2.6.x86_64.rpm MySQL-server-5.5.45-1.linux2.6.x86_64.rpm MySQL-devel-5.5.45-1.linux2.6.x86_64.rpm
 
 which mysql
@@ -19,6 +21,10 @@ yum install mariadb mariadb-server
 systemctl start mariadb.service
 systemctl enable mariadb.service
 /usr/bin/mysql_secure_installation
+
+/etc/init.d/mysql status
+
+/usr/bin/mysql /usr/lib64/mysql /usr/include/mysql /usr/share/mysql /usr/share/man/man1/mysql.1.gz
 
 mysql -u root -p
 show databases;
@@ -61,4 +67,19 @@ mysql> select host from user where user = 'root';
 host已经有了%这个值，所以直接运行命令： 
 mysql>flush privileges; 
 再用mysql administrator连接...成功！！！
+
+
+删除这两个服务(去掉后缀)
+rpm –e MySQL-client-5.6.19-1.linux_glibc2.5.x86_64
+rpm -e MySQL-server-5.6.19-1.linux_glibc2.5.x86_64
+查看残留的目录：
+whereis mysql
+
+然后删除mysql目录：
+rm –rf /usr/lib64/mysql
+
+删除相关文件：
+rm –rf /usr/my.cnf
+rm -rf /root/.mysql_sercret
+
 
