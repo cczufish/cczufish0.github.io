@@ -1,0 +1,7 @@
+Incompatible library version: XXX requires version 2.0.0 or later, but Runes provides version 1.0.0
+
+http://stackoverflow.com/questions/31634407/incompatible-library-version-xxx-requires-version-2-0-0-or-later-but-runes-pro
+
+https://github.com/CocoaPods/CocoaPods/issues/3903
+
+我把那个库改成版本1就好了
