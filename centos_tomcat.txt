@@ -8,3 +8,4 @@ vi /etc/rc.d/rc.local
 export JAVA_HOME=/usr/local/jdk1.6.0_32  
 /home/admin/soft/apache-tomcat-6.0.39/bin/startup.sh
 
+/usr/local/tomcat/apache-tomcat-8.0.24/bin

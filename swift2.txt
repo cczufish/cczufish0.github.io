@@ -1,0 +1,50 @@
+/Users/pro/Desktop/fp_swift_0915/Pods/<module-includes>:1:1: Umbrella header for module 'Alamofire' does not include header 'Alamofire.h'
+
+/Users/pro/Desktop/fp_swift_0915/Pods/JSONJoy-Swift/JSONJoy.swift:166:31: 'advance' is unavailable: call the 'advancedBy(n)' method on the index
+
+/Users/pro/Desktop/fp_swift_0915/fp_ios/ViewController/SecondHandVC/PostView.swift:359:19: Method does not override any method from its superclass
+https://github.com/cocos2d/cocos2d-objc/issues/1242
+
+
+/Users/pro/Desktop/fp_swift_0915/fp_ios/ViewController/MyInfoVC/SearchViewController.swift:151:12: Cannot invoke 'count' with an argument list of type '(String?)'
+        if count(searchKeyword) != 0
+
+        if searchTf.text?.characters.count == 0
+https://www.reddit.com/r/swift/comments/395ogp/how_can_i_get_the_length_of_string_in_swift_20/
+
+/Users/pro/Desktop/fp_swift_0915/fp_ios/ViewController/SecondHandVC/ImageSelectView.swift:78:47: 'buttonWithType' is unavailable: use object construction 'UIButton(type:)'
+
+http://stackoverflow.com/questions/31248927/ios-9-uibutton-inititalization
+
+swift 2.0 : toInt() method is given a error. Because,In Swift 2.x, the .toInt() function was removed from String
+
+https://github.com/daltoniam/JSONJoy-Swift/issues/24#issuecomment-140262174
+
+/Users/pro/Desktop/fp_swift_0915/fp_ios/ViewController/SecondHandVC/ImageSelectView.swift:85:17: Value of type 'UIButton' has no member 'setTranslatesAutoresizingMaskIntoConstraints'
+
+attachImageView.translatesAutoresizingMaskIntoConstraints =false
+                attachImageView?.setTranslatesAutoresizingMaskIntoConstraints(false)
+
+http://globalsoftwp.com/question/uiview-does-not-have-a-member-named-settranslatesautoresizingmaskintoconstraints/
+
+
+/Users/pro/Desktop/fp_swift_0915/fp_ios/ViewController/Common_View/CameraView.swift:49:119: Downcast from 'String?' to 'String' only unwraps optionals; did you mean to use '!'?
+
+/Users/pro/Desktop/fp_swift_0915/fp_ios/ViewController/MyInfoVC/LoginViewController/PerfectInfoView/PersonInfoView.swift:52:9: Call can throw, but it is not marked with 'try' and the error is not handled
+
+
+http://stackoverflow.com/questions/31022965/swift-2-json-call-can-throw-but-it-is-not-marked-with-try
+
+
+
+/Users/pro/Desktop/fp_swift_0915/fp_ios/Network/Network_Manager.swift:548:41: Tuple types '(NSURLRequest?, NSHTTPURLResponse?, Result<AnyObject>)' (aka '(Optional<NSURLRequest>, Optional<NSHTTPURLResponse>, Result<AnyObject>)') and '(_, _, _, _)' have a different number of elements (3 vs. 4)
+
+
+/Users/pro/Desktop/fp_swift_0915/fp_ios/Network/Network_Manager.swift:551:33: Binary operator '==' cannot be applied to operands of type 'Result<AnyObject>' and 'NilLiteralConvertible'
+
+
+Impact of Xcode build options “Enable bitcode” Yes/No
+
+http://stackoverflow.com/questions/31088618/impact-of-xcode-build-options-enable-bitcode-yes-no
+
+
