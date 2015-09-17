@@ -81,3 +81,5 @@ setsebool -P ftpd_disable_trans 1
 service vsftpd restart
 就ＯＫ了！
 原因：这是因为服务器开启了selinux，这限制了FTP的登录。
+
+http://www.cnblogs.com/lightnear/archive/2012/10/07/2713539.html
