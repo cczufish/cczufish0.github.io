@@ -35,10 +35,9 @@ pigai.wang  新东方批改网 极致批改网
 ymqg.wang  域名求购
 竞秀.cn
 竞秀.com
-lingzhongjie.cn
-ewmpay.com
-daomangquan.org
-zhutiguan.cn
+lingzhongjie.cn   零中介
+ewmpay.com        二维码支付
+zhutiguan.cn      主题馆
 魅蓝.com
 魅蓝.cn
 hellochinese.com.cn
@@ -54,6 +53,7 @@ xinyuanqiang.cn 心愿墙
 tangmao.org  糖猫
 daomangquan.net
 daomangquan.cn  导盲犬
+daomangquan.org
 91qianbao.com.cn  91钱包
 zhongchouxian.cn  众筹险
 zhongchouxian.com
@@ -70,7 +70,7 @@ zhaikexueyuan.com.cn
 zhaikexueyuan.cn  宅客学院  com是终端
 kangdingxian.cn   康定县
 
-0.dog
+0.dog    参考4.dog已经建站
 
 3268888.net
 889688.net
@@ -87,7 +87,7 @@ kangdingxian.cn   康定县
 51951.com.cn
 89289.com.cn
 09345.com.cn
-745000.com.cn
+745000.com.cn  庆阳邮编  cn 庆阳仲裁委员会  
 
 30972.cn
 
@@ -99,7 +99,7 @@ kangdingxian.cn   康定县
 844485.com
 644436.com
 
-0873.pw
+0873.pw   云南红河区号
 
 
 四声母cc：
@@ -112,7 +112,7 @@ snnl.cc
 fpbt.cc
 knxb.cc
 hjnz.cc
-sfgd.cc
+sfgd.cc  顺丰光电
 cjqk.cc
 cjLq.cc
 cjpn.cc
