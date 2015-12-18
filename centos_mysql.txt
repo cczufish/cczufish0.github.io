@@ -83,3 +83,67 @@ rm –rf /usr/my.cnf
 rm -rf /root/.mysql_sercret
 
 
+
+CentOS 7的yum源中貌似没有正常安装mysql时的mysql-sever文件，需要去官网上下载
+# wget http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
+# rpm -ivh mysql-community-release-el7-5.noarch.rpm
+# yum install mysql-community-server
+成功安装之后重启mysql服务
+# service mysqld restart
+初次安装mysql是root账户是没有密码的
+设置密码的方法
+# mysql -uroot
+mysql> set password for ‘root’@‘localhost’ = password('mypasswd');
+mysql> exit
+
+
+mysql中文乱码
+
+登录进mysql看看是个什么情况。
+
+mysql -u root -p
+
+5.看下mysql的编码，发现不全是utf8，有Latin的，这是中文乱码的根源。
+
+show variables like 'character%';
+
+6.关闭mysql服务，准备开始修改my.cnf文件
+
+service mysqld stop
+vi /etc/my.cnf
+
+7.看了网络上很多版本的my.cnf的修改方式，我索性就全给改成了utf8，我的my.cnf文件是这样的。
+
+[mysqld]
+character_set_server=utf8      #这个是我添加的
+init_connect='SET NAMES utf8'
+datadir=/var/lib/mysql
+socket=/var/lib/mysql/mysql.sock
+user=mysql
+symbolic-links=0
+ 
+[mysqld_safe]
+default-character-set = utf8    #这个是我添加的
+log-error=/var/log/mysqld.log
+pid-file=/var/run/mysqld/mysqld.pid
+ 
+[client]
+default-character-set = utf8      #这个是我添加的
+ 
+[mysql.server]
+default-character-set = utf8      #这个是我添加的
+ 
+[mysql]
+default-character-set = utf8      #这个是我添加的
+ 
+
+8.修改了my.cnf文件之后一定要重启mysql服务，这是必须的。
+
+service mysqld restart
+ 
+
+9.再进去mysql查看编码会发都变成了utf8，除了character_set_filesystem 是binary 。这个不用我解释是为什么了。
+
+
+
+
