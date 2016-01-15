@@ -1,0 +1,109 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>抽奖</title>
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<script type="text/javascript">
+var alldata = "安毅,董延伟,高富强,韩术兰,韩颖,黄妍秋,贾芳,雷伟,李凯,李旭,李正岳,梁建明,林琳,刘建平,路昭,路中正,马飞,马丽莎,郄瑞,石海平,孙小梅,王乐,王盼,网雪垠,文闪闪,肖罡,谢二星,严国泽,彦总,杨浩云,杨莉莉,杨瑞华,于波,鱼舒辉,张小芳,赵晶晶,朱天和,朱玉秋" ;
+var alldataArr = alldata.split(",");
+var num= alldataArr.length-1;
+var timer;
+//产生随机数
+function getRnd(min,max){
+	return parseInt(Math.random()*(max-min+1));
+	}
+//判断选中的人的在数组的下标
+Array.prototype.indexOf = function(val) {
+	for (var i = 0; i < this.length; i++) {
+		if (this[i] == val) return i;
+	}
+	return -1;
+};
+//删除选中的人名
+Array.prototype.remove = function(val) {
+	var index = this.indexOf(val);
+	if (index > -1) {
+		this.splice(index, 1);
+	}
+};
+//图片改变
+function change(){
+	var randm = getRnd(0,num);
+	document.getElementById("showresult").value=alldataArr[randm];
+	document.getElementById("photoshow").src = "img/"+alldataArr[randm]+".jpg";
+        document.getElementById("changem").play();
+	}
+	//点击开始按钮
+function start(){
+	document.getElementById("showresult").value="";
+	clearInterval(timer);
+	timer=setInterval('change()',100);
+	}
+	//点击结束按钮
+function end(){
+	document.getElementById("shadow").style.display="block";
+	clearInterval(timer);
+	timer= setInterval('change()',300)
+	setTimeout('clos()',2000);
+	}
+	//遮罩层
+function shadowClose(){
+	document.getElementById("shadow").style.display="none";
+	}
+function clos(){
+	clearInterval(timer);
+	alldataArr.remove(document.getElementById('showresult').value);
+	num=num-1;
+	var newli = document.createElement("li");
+	var textNode = document.getElementById('showresult').value;
+	var listul = document.getElementById("listul");
+	newli.innerHTML=textNode;
+	listul.appendChild(newli);
+	document.getElementById("shadow").onclick= function(){
+		this.style.display="none";
+		}
+        document.getElementById("endm").play();
+	}
+function listOpen(){
+	document.getElementById("list").style.display="block";
+	}
+function menuOpen(){
+	document.getElementById("resultTitle").style.display="block";
+	setTimeout("listOpen()",1000)
+	}                                                                                               
+function closeResult(){
+	document.getElementById("resultTitle").style.display="none";
+	document.getElementById("list").style.display="none";
+	}
+</script>
+</head>
+
+<body>
+<audio id ="changem" preload="preload">
+	<source src="music/change.mp3" type="audio/mpeg">
+</audio>
+<audio id ="endm"preload="preload">
+	<source src="music/end.mp3" type="audio/mpeg">
+</audio>
+ <div id="shadow" class="shadow"></div>
+ <div class=""></div>
+<div id="box">
+	<div class="image">
+    	<img src="" id="photoshow">
+    </div>
+    <input type="text" class="text" id="showresult">
+    <button class="start" onClick="start()"></button>
+    <button class="end" onClick="end()"></button>
+</div>
+<div class="result" onClick="menuOpen()"></div>
+<div class="result-menu" id="result-menu" onClick="closeResult()">
+<p id="resultTitle">获奖名单</p>
+<div class="list" id="list">
+<ul class="listul" id="listul">
+</ul>
+</div>
+</div>
+
+</body>
+</html>

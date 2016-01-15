@@ -11,3 +11,5 @@ export JAVA_HOME=/usr/local/jdk1.6.0_32  
 /usr/local/tomcat/apache-tomcat-8.0.24/bin
 
 /usr/local/tomcat/apache-tomcat-8.0.24/bin
+
+jdk1.7.0_79

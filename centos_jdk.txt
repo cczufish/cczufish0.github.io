@@ -14,3 +14,4 @@ export JAVA_HOME PATH CLASSPATH
 
 java -version
 
+
