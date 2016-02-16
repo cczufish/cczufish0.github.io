@@ -1,0 +1,68 @@
++ (NSString *)parseParams:(NSDictionary *)params{
+    NSString *keyValueFormat;
+    NSMutableString *result = [NSMutableString new];
+    NSEnumerator *keyEnum = [params keyEnumerator];
+    id key;
+    while (key = [keyEnum nextObject]) {
+        keyValueFormat = [NSString stringWithFormat:@"%@=%@&",key,[params valueForKey:key]];
+        [result appendString:keyValueFormat];
+        NSLog(@"解析结果：%@",result);
+    }
+    return result;
+}
+
++ (NSData *)httpUrl:(NSString*)RequestUrl withBody:(NSString*)bodyString
+{
+    NSData *bodyData = [[bodyString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]dataUsingEncoding:NSUTF8StringEncoding];
+    NSURL *serverUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",URL_SERVER_TEST,RequestUrl]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:serverUrl
+                                                           cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
+                                                       timeoutInterval:10];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:bodyData];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"content-type"];
+    NSURLResponse *response = [[NSURLResponse alloc]init];
+    NSError *error = [[NSError alloc]initWithDomain:@"" code:0 userInfo:nil];
+    NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response   error:&error];
+//    NSLog(@"response ===%@，请求错误---error = %@",response,error);
+    
+    return returnData;
+}
+
+
+
++(void)postddByByUrlPath:(NSString *)path andParams:(NSDictionary*)params
+                 success:(void (^)(id responseDic))success fail:(void (^)(NSError *error))fail{
+    {
+        
+        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+        
+        manager.responseSerializer = [AFJSONResponseSerializer serializer];//使用这个将得到的是JSON
+        
+        //注意：此行不加也可以
+        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json", @"text/plain", @"text/html", nil];
+        
+        //SEND YOUR REQUEST
+        [manager POST:path parameters:params success:^(AFHTTPRequestOperation *operation, id responseDic) {
+//            NSDictionary * dic =  responseDic;
+//            NSString * str =[responseDic objectForKey:@"resultMessage"];
+//            NSLog(@"返回数据=======%@",dic);
+//            NSLog(@"返回数据=======%@",str);
+            
+            if (success) {
+                success(responseDic);
+            }
+            
+            //...
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"Error: %@", error);
+        }];
+    }
+    
+        
+    
+}
+
+
+
