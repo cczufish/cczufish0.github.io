@@ -1,0 +1,27 @@
+<HTML>
+	<HEAD>
+		<TITLE>数据类型转换方法的使用</TITLE>
+		<SCRIPT Language="JavaScript">
+
+            var s1 = "100abc";
+            var s2 = "20.5";
+            document.write("s1=\"100abc\" s2=\"20.05\"");
+            num1 = parseInt(s1);
+            num2 = parseInt(s2);
+            document.write("<br>将s1转换为整形后的结果为：",num1);
+            document.write("<br>将s2转换为整型后的结果为：",num2);
+            num1 = parseInt(s1,8);
+            num2 = parseInt(s2,2);
+            document.write("<br>将s1作为8进制数转换的结果为：",num1);
+            document.write("<br>将s2作为2进制数转换的结果为：",num2);
+
+            num2 = parseFloat(s2);
+            document.write("<br>将s2作为浮点数转换的结果为：",num2);
+            result = eval("100"+s2);
+            document.write("<br>eval(\"100\"+s2)的返回值为：",result);
+		</SCRIPT>
+	</HEAD>
+	<BODY>
+	</BODY>
+</HTML>
+

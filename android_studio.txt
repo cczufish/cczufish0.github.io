@@ -1,0 +1,10 @@
+https://dl.google.com/dl/android/studio/install/1.3.0.10/android-studio-ide-141.2117773-mac.dmg
+
+
+android studio不能新建项目 :sdk   jdk1.8
+
+不能在线安装sdks，解决办法是在任务管理器中手工关掉android studio的进程，然后打开Android Studio安装目录的bin目录下面的idea.properties文件，在末尾添加一条禁用开始运行向导的配置项：disable.android.first.run=true
+
+手动下载 配置sdk
+
+Downloading android-sdk_r22.6.2-macosx.zip from https://dl.google.com/android/android-sdk_r22.6.2-macosx.zip

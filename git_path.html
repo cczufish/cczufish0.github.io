@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1348.17">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Heiti SC Light'}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px Menlo}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px Menlo; min-height: 13.0px}
+    span.s1 {font: 12.0px Helvetica}
+    span.s2 {font-variant-ligatures: no-common-ligatures}
+    span.s3 {font: 11.0px 'Heiti SC Light'; font-variant-ligatures: no-common-ligatures}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">git </span>找不到环境变量</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="s2">sh: line 1: 21794 Segmentation fault: 11<span class="Apple-converted-space">  </span>/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk macosx -find git 2&gt; /dev/null</span></p>
+<p class="p3"><span class="s2">git: error: unable to find utility "git", not a developer tool or in PATH</span></p>
+<p class="p4"><span class="s2"></span><br></p>
+<p class="p3"><span class="s2">vi ~/.bash_profile</span></p>
+<p class="p4"><span class="s2"></span><br></p>
+<p class="p3"><span class="s3">添加</span><span class="s2"><span class="Apple-converted-space">  </span>export PATH="/usr/local/git/bin:$PATH"</span></p>
+<p class="p4"><span class="s2"></span><br></p>
+<p class="p3"><span class="s2">source ~/.bash_profile</span></p>
+<p class="p4"><span class="s2"></span><br></p>
+<p class="p3"><span class="s2">git --help</span></p>
+<p class="p4"><span class="s2"></span><br></p>
+<p class="p3"><span class="s2">usage: git [--version] [--help] [-C &lt;path&gt;] [-c name=value]</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">           </span>[--exec-path[=&lt;path&gt;]] [--html-path] [--man-path] [--info-path]</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">           </span>[-p | --paginate | --no-pager] [--no-replace-objects] [--bare]</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">           </span>[--git-dir=&lt;path&gt;] [--work-tree=&lt;path&gt;] [--namespace=&lt;name&gt;]</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">           </span>&lt;command&gt; [&lt;args&gt;]</span></p>
+<p class="p4"><span class="s2"></span><br></p>
+<p class="p3"><span class="s2">The most commonly used git commands are:</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>add<span class="Apple-converted-space">        </span>Add file contents to the index</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>bisect <span class="Apple-converted-space">    </span>Find by binary search the change that introduced a bug</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>branch <span class="Apple-converted-space">    </span>List, create, or delete branches</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>checkout <span class="Apple-converted-space">  </span>Checkout a branch or paths to the working tree</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>clone<span class="Apple-converted-space">      </span>Clone a repository into a new directory</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>commit <span class="Apple-converted-space">    </span>Record changes to the repository</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>diff <span class="Apple-converted-space">      </span>Show changes between commits, commit and working tree, etc</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>fetch<span class="Apple-converted-space">      </span>Download objects and refs from another repository</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>grep <span class="Apple-converted-space">      </span>Print lines matching a pattern</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>init <span class="Apple-converted-space">      </span>Create an empty Git repository or reinitialize an existing one</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>log<span class="Apple-converted-space">        </span>Show commit logs</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>merge<span class="Apple-converted-space">      </span>Join two or more development histories together</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>mv <span class="Apple-converted-space">        </span>Move or rename a file, a directory, or a symlink</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>pull <span class="Apple-converted-space">      </span>Fetch from and integrate with another repository or a local branch</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>push <span class="Apple-converted-space">      </span>Update remote refs along with associated objects</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>rebase <span class="Apple-converted-space">    </span>Forward-port local commits to the updated upstream head</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>reset<span class="Apple-converted-space">      </span>Reset current HEAD to the specified state</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>rm <span class="Apple-converted-space">        </span>Remove files from the working tree and from the index</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>show <span class="Apple-converted-space">      </span>Show various types of objects</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>status <span class="Apple-converted-space">    </span>Show the working tree status</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">   </span>tag<span class="Apple-converted-space">        </span>Create, list, delete or verify a tag object signed with GPG</span></p>
+<p class="p4"><span class="s2"></span><br></p>
+<p class="p3"><span class="s2">'git help -a' and 'git help -g' list available subcommands and some</span></p>
+<p class="p3"><span class="s2">concept guides. See 'git help &lt;command&gt;' or 'git help &lt;concept&gt;'</span></p>
+<p class="p3"><span class="s2">to read about a specific subcommand or concept.</span></p>
+<p class="p4"><span class="s2"></span><br></p>
+</body>
+</html>
