@@ -5,3 +5,5 @@ http://blog.csdn.net/meegomeego/article/details/24005567
 pod update 卡住： pod update --verbose --no-repo-update
 
 pod install  被墙了，请大家换成pod install --verbose --no-repo-update
+
+
